@@ -1,0 +1,20 @@
+.card {
+    margin: 10px;
+}
+
+.card>fieldset {
+    border: solid;
+    border-width: medium;
+    border-color: var(--font-color);
+    padding: 5px;
+}
+
+.legend {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: var(--font-title-size);
+}
+
+.no-legend {
+    height: calc((var(--font-title-size)/2) + 1px);
+}

@@ -1,5 +1,4 @@
 # pcdashboard
-
 pcdashboard is a React application for displaying a PC's sensor readings from a REST endpoint.
 
 ## Running in development mode

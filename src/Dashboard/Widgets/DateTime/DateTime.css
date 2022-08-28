@@ -1,0 +1,7 @@
+.dateTime {
+    text-align: center;
+}
+
+.time {
+    font-size: var(--font-title-size);
+}
