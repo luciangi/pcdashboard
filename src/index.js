@@ -1,6 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 import App from "./App/App"
+import ErrorBoundary from "./ErrorBoundary/ErrorBoundary"
 import "./index.css"
 
 ReactDOM
@@ -8,7 +9,9 @@ ReactDOM
   .render(
     <React.StrictMode>
       <div className="wrapper">
-        <App />
+        <ErrorBoundary>
+          <App />
+        </ErrorBoundary>
       </div>
     </React.StrictMode>
   )

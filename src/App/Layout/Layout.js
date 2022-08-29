@@ -1,20 +1,20 @@
+import React from "react"
 import PropTypes from "prop-types"
-import "./Dashboard.css"
-import Card from "./Widgets/Card/Card"
+import "./Layout.css"
 import DateTime from "./Widgets/DateTime/DateTime"
-import Table from "./Widgets/Table/Table"
+import Processes from "./Widgets/Processes/Processes"
 
-const Dashboard = ({ data }) => (
+const Layout = ({ data }) => (
     <div className="container">
         <div className="item">
         </div>
         <div className="item">
-            <Card content={<DateTime date={new Date(data.date * 1000)} />} />
+            <DateTime data={data.date} />
         </div>
         <div className="item">
         </div>
         <div className="item">
-            <Card title="Top processes" content={<Table heading={Object.keys(data.processes[0])} body={data.processes} />} />
+            <Processes data={data.processes} />
         </div>
         <div className="item">
         </div>
@@ -25,12 +25,12 @@ const Dashboard = ({ data }) => (
     </div>
 )
 
-Dashboard.propTypes = {
+Layout.propTypes = {
     data: PropTypes.shape({
         date: PropTypes.number.isRequired,
         processes: PropTypes.array.isRequired,
-        sensor: PropTypes.object.isRequired
+        sensors: PropTypes.object.isRequired
     })
 }
 
-export default Dashboard
+export default Layout
