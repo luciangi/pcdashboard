@@ -1,4 +1,4 @@
-const findValueByKeyStartsWith = (o, startsWith) => Object.entries(o).find(e => e[0].startsWith(startsWith))[1];
+const findValueByKeyStartsWith = (o, startsWith) => o && Object.entries(o).find(e => e[0].startsWith(startsWith))[1];
 
 export const generateSensorsHelpers = (sensors) => ({
     getSensorData: (label, removeSpaces = true) => {

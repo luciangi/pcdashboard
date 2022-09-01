@@ -5,7 +5,7 @@ import SparkLine from "../SparkLine/SparkLine"
 
 const Fps = ({ date, data }) => (
     <Card
-        title={<div><GiStack /> FPS {data.fps}</div>}
+        title={<div><GiStack /> FPS {data.fps ? data.fps : ""}</div>}
         content={
             <SparkLine
                 instant={date}
