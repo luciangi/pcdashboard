@@ -18,7 +18,7 @@ const BarGauge = ({ data, max, title }) => {
                     <BarChart
                         layout="vertical"
                         margin={{ top: 0, left: 15, right: 15, bottom: 0 }}
-                        barGap={-20}
+                        barGap={-32}
                         data={[{ rawData, max }]}
                     >
                         <XAxis type="number" hide />

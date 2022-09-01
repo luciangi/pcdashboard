@@ -6,7 +6,9 @@ const Card = ({ title, content }) => {
         {!title && <div className="no-legend">&nbsp;</div>}
         <fieldset>
             {title && <legend className="legend">{title}</legend>}
-            {content}
+            <div className="card-content">
+                {content}
+            </div>
         </fieldset>
     </div>
 }

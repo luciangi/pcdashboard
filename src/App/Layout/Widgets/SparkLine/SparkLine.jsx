@@ -24,7 +24,10 @@ const SparkLine = ({ instant, data, reference, min, max, showLegend = false }) =
     return (
         <div className="sparkline-wrapper">
             <ResponsiveContainer>
-                <LineChart data={dataHistory}>
+                <LineChart
+                    data={dataHistory}
+                    margin={{ top: 5, left: 50, right: 5, bottom: 5 }}
+                >
                     <XAxis
                         type="number"
                         domain={[lastInstant, instant]}
@@ -38,9 +41,9 @@ const SparkLine = ({ instant, data, reference, min, max, showLegend = false }) =
                         stroke={colorPrimary}
                     />
                     {showLegend === true && <Legend />}
-                    {reference && <ReferenceLine y={reference} stroke={colorPrimary} />}
+                    {reference && <ReferenceLine y={reference} stroke={colorPrimary} strokeWidth={5} />}
 
-                    {Object.keys(data).map((k, idx) => (<Line dataKey={`data.${k}`} stroke={idxToColor[idx]} dot={false} isAnimationActive={false} name={k} />))}
+                    {Object.keys(data).map((k, idx) => (<Line dataKey={`data.${k}`} stroke={idxToColor[idx]} strokeWidth={5} dot={false} isAnimationActive={false} name={k} />))}
                 </LineChart>
             </ResponsiveContainer>
         </div>

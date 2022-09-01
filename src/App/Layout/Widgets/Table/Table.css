@@ -9,7 +9,7 @@
 }
 
 .table>tbody>tr>td:not(:first-child) {
-    width: 55px;
+    width: 150px;
     white-space: nowrap;
 }
 
