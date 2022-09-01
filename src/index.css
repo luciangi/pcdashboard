@@ -1,12 +1,3 @@
-:root {
-    --background-color: #784600;
-    --font-color: #be6f00;
-    --font-color-secondary: #be6f00;
-    --font-shadow-color: #ffa321;
-    --font-title-size: 40px;
-    --font-size: 24px;
-}
-
 body {
     margin: 0px;
     padding: 0px;
@@ -14,7 +5,7 @@ body {
     background-color: black;
     background-image: radial-gradient(var(--background-color), black 120%);
     font: var(--font-size) Inconsolata, monospace;
-    color: var(--font-color);
+    color: var(--color-primary);
     text-shadow: 0 0 3px var(--font-shadow-color);
 }
 

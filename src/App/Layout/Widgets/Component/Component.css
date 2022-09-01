@@ -1,0 +1,23 @@
+.cpu-metrics-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.cpu-metrics-c1 {
+    width: 55%;
+}
+
+.cpu-metrics-c2 {
+    width: 45%;
+}
+
+.cpu-metrics-c1r1,
+.cpu-metrics-c1r2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.cpu-metrics-c1r1c1,
+.cpu-metrics-c1r1c2 {
+    width: 50%;
+}

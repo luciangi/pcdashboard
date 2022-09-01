@@ -21,7 +21,7 @@ class App extends React.Component {
       async () => {
         try {
           const data = await getWinHwMetrics()
-          if (!this.state.data && Object.keys(this.state.data).length === 0) {
+          if (!data && Object.keys(data).length === 0) {
             throw new Error(`WinHwMetrics data was empty! data=${data}`)
           }
 

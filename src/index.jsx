@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client"
 import App from "./App/App"
 import ErrorBoundary from "./ErrorBoundary/ErrorBoundary"
 import "./index.css"
+import "./variables.css"
 
 ReactDOM
   .createRoot(document.getElementById("root"))

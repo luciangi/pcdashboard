@@ -1,15 +1,18 @@
 .table {
     width: 100%;
-    /* table-layout: fixed; */
-    /* overflow-wrap: break-word; */
     text-align: left;
 }
 
 .table>thead {
-    color: var(--font-color-secondary);
+    color: var(--color-secondary);
     white-space: nowrap;
 }
 
 .table>tbody>tr>td:not(:first-child) {
-    width: 50px;
+    width: 55px;
+    white-space: nowrap;
+}
+
+.table-highlight {
+    color: var(--color-secondary);
 }

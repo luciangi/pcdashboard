@@ -1,11 +1,20 @@
-import Table from "App/Layout/Gauges/Table/Table";
 import PropTypes from "prop-types";
 import Card from "../Card/Card";
+import Table from "../Table/Table";
+import { BsMicrosoft } from "react-icons/bs"
 
-const Processes = ({ data }) => <Card title="Top processes" content={<Table heading={Object.keys(data[0])} body={data} />} />
+const Processes = ({ processes }) => (
+    <Card
+        title={
+            <div><BsMicrosoft /> Processes</div>
+        }
+        content={
+            <Table heading={Object.keys(processes[0])} body={processes} />
+        } />
+)
 
 Processes.propTypes = {
-    data: PropTypes.array.isRequired
+    processes: PropTypes.array.isRequired
 }
 
 export default Processes;

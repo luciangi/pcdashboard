@@ -1,20 +1,21 @@
 .card {
-    margin: 10px;
+    margin: 5px;
 }
 
 .card>fieldset {
     border: solid;
     border-width: medium;
-    border-color: var(--font-color);
-    padding: 5px;
+    border-color: var(--color-primary);
+    padding: 2px;
 }
 
 .legend {
     padding-left: 10px;
     padding-right: 10px;
-    font-size: var(--font-title-size);
+    font-size: var(--font-header-size);
+    color: var(--color-secondary);
 }
 
 .no-legend {
-    height: calc((var(--font-title-size)/2) + 1px);
+    height: calc((var(--font-header-size)/2) + 3px);
 }

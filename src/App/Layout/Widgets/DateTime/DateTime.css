@@ -3,5 +3,6 @@
 }
 
 .time {
-    font-size: var(--font-title-size);
+    font-size: var(--font-header-size);
+    color: var(--color-secondary);
 }

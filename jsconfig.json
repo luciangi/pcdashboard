@@ -1,7 +1,14 @@
 {
     "compilerOptions": {
-      "baseUrl": "./src",
-      "module": "es2015",
-      "jsx": "react-jsx"
-    }
-  }
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "target": "ES2020",
+        "jsx": "react",
+        "strictNullChecks": false,
+        "strictFunctionTypes": true
+    },
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*"
+    ]
+}
