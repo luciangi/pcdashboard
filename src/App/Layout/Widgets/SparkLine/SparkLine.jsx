@@ -43,7 +43,7 @@ const SparkLine = ({ instant, data, reference, min, max, showLegend = false }) =
                     {showLegend === true && <Legend />}
                     {reference && <ReferenceLine y={reference} stroke={colorPrimary} strokeWidth={5} />}
 
-                    {Object.keys(data).map((k, idx) => (<Line dataKey={`data.${k}`} stroke={idxToColor[idx]} strokeWidth={5} dot={false} isAnimationActive={false} name={k} />))}
+                    {Object.keys(data).map((k, idx) => (<Line key={`data.${k}`} dataKey={`data.${k}`} stroke={idxToColor[idx]} strokeWidth={5} dot={false} isAnimationActive={false} name={k} />))}
                 </LineChart>
             </ResponsiveContainer>
         </div>

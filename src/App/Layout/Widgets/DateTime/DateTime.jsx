@@ -1,10 +1,12 @@
-import PropTypes from "prop-types"
+import { useEffect, useState } from "react"
 import Card from "../Card/Card"
 import "./DateTime.css"
 import { getDateString, getTimeString } from "./util.js"
 
-const DateTime = ({ date }) => {
-    const currentDate = new Date(date * 1000)
+const DateTime = () => {
+    const [currentDate, setCurrentDate] = useState(new Date(Date.now()))
+
+    useEffect(() => { setInterval(() => setCurrentDate(new Date(Date.now())), 1000) })
 
     return (
         <Card content={
@@ -17,7 +19,6 @@ const DateTime = ({ date }) => {
 }
 
 DateTime.propTypes = {
-    date: PropTypes.number.isRequired
 }
 
 export default DateTime

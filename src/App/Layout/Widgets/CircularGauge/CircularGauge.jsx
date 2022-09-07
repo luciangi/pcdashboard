@@ -11,23 +11,25 @@ const CircularGauge = ({ data, max, title }) => {
         <div className="circular-gauge-wrapper">
             <div className="circular-gauge-label">{data}</div>
             <div className="circular-gauge-title">{title}</div>
-            <ResponsiveContainer>
-                <PieChart margin={{ top: -10, right: 0, bottom: -10, left: 0 }}>
-                    <Pie
-                        data={[{ v: rawData }, { v: max - rawData }]}
-                        dataKey="v"
-                        startAngle={200}
-                        endAngle={-20}
-                        innerRadius="55%"
-                        blendStroke
-                        cy="50%"
-                        cx="50%"
-                    >
-                        <Cell fill={colorSecondary} />
-                        <Cell fill={colorPrimary} />
-                    </Pie>
-                </PieChart>
-            </ResponsiveContainer>
+            <div className="circular-gauge-chart">
+                <ResponsiveContainer>
+                    <PieChart margin={{ top: 0, right: 0, bottom: 0, left: 0 }}>
+                        <Pie
+                            data={[{ v: rawData }, { v: max - rawData }]}
+                            dataKey="v"
+                            startAngle={200}
+                            endAngle={-20}
+                            innerRadius="55%"
+                            blendStroke
+                            cy="50%"
+                            cx="50%"
+                        >
+                            <Cell fill={colorSecondary} />
+                            <Cell fill={colorPrimary} />
+                        </Pie>
+                    </PieChart>
+                </ResponsiveContainer>
+            </div>
         </div>
     );
 }
