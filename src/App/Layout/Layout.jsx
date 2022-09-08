@@ -10,12 +10,12 @@ import Fps from "./Widgets/Fps/Fps"
 import Processes from "./Widgets/Processes/Processes"
 import Network from "./Widgets/Network/Network"
 
-const Layout = ({ data }) => {
+const Layout = ({ now, data }) => {
     const { getSensorRawData, getSensorData } = generateSensorsHelpers(data.sensors)
     return (
         <div className="layout-container">
             <div className="layout-column">
-                <DateTime date={data.date} />
+                <DateTime now={now} />
                 <Processes processes={data.processes} />
                 <Network
                     date={data.date}
@@ -62,7 +62,7 @@ const Layout = ({ data }) => {
                             },
                             {
                                 name: <div><GiCpu /> AIO</div>,
-                                value: getSensorRawData("AIO Pump", false) > 2000 ? "ON" : "OFF"
+                                value: getSensorRawData("AIO Pump", false) > 1000 ? "ON" : "OFF"
                             },
                             {
                                 name: <div><GiComputerFan /> CPU</div>,
@@ -122,7 +122,8 @@ Layout.propTypes = {
         date: PropTypes.number.isRequired,
         processes: PropTypes.array.isRequired,
         sensors: PropTypes.array.isRequired
-    })
+    }),
+    now: PropTypes.number.isRequired
 }
 
 export default Layout

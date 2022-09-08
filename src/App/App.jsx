@@ -3,12 +3,13 @@ import LoadingState from "./LoadingState/LoadingState"
 import Layout from "./Layout/Layout"
 import { getWinHwMetrics } from "./util"
 
-class App extends React.Component {
+class App extends React.PureComponent {
   constructor(props) {
     super(props)
     this.state = {
       data: {},
-      isLoading: true
+      lastUpdated: null,
+      now: Date.now()
     }
   }
 
@@ -20,26 +21,30 @@ class App extends React.Component {
     setInterval(
       async () => {
         try {
-          const data = await getWinHwMetrics()
-          if (!data && Object.keys(data).length === 0) {
-            throw new Error(`WinHwMetrics data was empty! data=${data}`)
-          }
+          this.setState((state) => ({ ...state, now: Date.now() }))
 
-          this.setState({ data, isLoading: false })
+          if (this.state.now - this.state.lastUpdated > polling_rate) {
+            const data = await getWinHwMetrics()
+            if (!data && Object.keys(data).length === 0) {
+              throw new Error(`WinHwMetrics data was empty! data=${data}`)
+            }
+
+            this.setState((state) => ({ ...state, data, lastUpdated: this.state.now }))
+          }
         } catch (e) {
           this.setState(() => { throw new Error(`Something went wrong while trying to fetch getWinHwMetrics. ${e}`) })
         }
       },
-      polling_rate
+      1000
     )
   }
 
   render() {
-    if (this.state.isLoading) {
+    if (this.state.lastUpdated === null) {
       return <LoadingState />
     }
 
-    return <Layout data={this.state.data} />
+    return <Layout data={this.state.data} now={this.state.now} />
   }
 }
 

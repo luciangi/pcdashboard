@@ -11,6 +11,7 @@
 .table>tbody>tr>td:not(:first-child) {
     width: 150px;
     white-space: nowrap;
+    text-align: left;
 }
 
 .table-highlight {

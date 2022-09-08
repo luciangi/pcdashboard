@@ -26,7 +26,7 @@ const SparkLine = ({ instant, data, reference, min, max, showLegend = false }) =
             <ResponsiveContainer>
                 <LineChart
                     data={dataHistory}
-                    margin={{ top: 5, left: 50, right: 5, bottom: 5 }}
+                    margin={{ top: 5, left: 20, right: 5, bottom: 5 }}
                 >
                     <XAxis
                         type="number"
