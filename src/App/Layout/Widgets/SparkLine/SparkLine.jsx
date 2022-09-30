@@ -8,7 +8,7 @@ import "./SparkLine.css"
 
 const DATE_RETENTION_LIMIT_SECONDS = 5 * 60
 
-const SparkLine = ({ instant, data, reference, min, max, showLegend = false }) => {
+const SparkLine = ({ instant, data, reference, max, showLegend = false }) => {
     const lastInstant = instant - DATE_RETENTION_LIMIT_SECONDS
 
     const { colorPrimary, colorSecondary } = getColors()
@@ -36,10 +36,11 @@ const SparkLine = ({ instant, data, reference, min, max, showLegend = false }) =
                     />
                     <YAxis
                         type="number"
-                        domain={[min ? min : 0, max ? max : "auto"]}
+                        domain={[0, max ? max : "auto"]}
                         dataKey={`data.${Object.keys(data)[0]}`}
                         stroke={colorPrimary}
                     />
+
                     {showLegend === true && <Legend />}
                     {reference && <ReferenceLine y={reference} stroke={colorPrimary} strokeWidth={5} />}
 
@@ -54,7 +55,6 @@ SparkLine.propTypes = {
     instant: PropTypes.number.isRequired,
     data: PropTypes.object.isRequired,
     reference: PropTypes.number,
-    min: PropTypes.number,
     max: PropTypes.number,
     showLegend: PropTypes.bool
 }

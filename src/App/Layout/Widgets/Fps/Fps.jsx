@@ -11,7 +11,6 @@ const Fps = ({ date, data }) => (
                 instant={date}
                 data={data}
                 reference={60}
-                min={0}
                 max={120}
             />
         } />
