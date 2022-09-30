@@ -7,31 +7,16 @@ import { generateSensorsHelpers } from "./util"
 import Component from "./Widgets/Component/Component"
 import DateTime from "./Widgets/DateTime/DateTime"
 import Fps from "./Widgets/Fps/Fps"
-import Processes from "./Widgets/Processes/Processes"
 import Network from "./Widgets/Network/Network"
+import Processes from "./Widgets/Processes/Processes"
 
 const Layout = ({ now, data }) => {
     const { getSensorRawData, getSensorData } = generateSensorsHelpers(data.sensors)
     return (
-        <div className="layout-container">
+        <div className="layout-row">
             <div className="layout-column">
                 <DateTime now={now} />
                 <Processes processes={data.processes} />
-                <Network
-                    date={data.date}
-                    data={{
-                        download: getSensorRawData("Current DL rate"),
-                        upload: getSensorRawData("Current UP rate")
-                    }}
-                />
-                <Fps
-                    date={data.date}
-                    data={{
-                        fps: getSensorRawData("Framerate")
-                    }}
-                />
-            </div>
-            <div className="layout-column">
                 <Component
                     title={<div><BsCpu /> CPU</div>}
                     cg1={{
@@ -74,6 +59,21 @@ const Layout = ({ now, data }) => {
                             }
                         ]
                     }} />
+            </div>
+            <div className="layout-column">
+                <Network
+                    date={data.date}
+                    data={{
+                        download: getSensorRawData("Current DL rate"),
+                        upload: getSensorRawData("Current UP rate")
+                    }}
+                />
+                <Fps
+                    date={data.date}
+                    data={{
+                        fps: getSensorRawData("Framerate")
+                    }}
+                />
                 <Component
                     title={<div><BsDisplay /> GPU</div>}
                     cg1={{

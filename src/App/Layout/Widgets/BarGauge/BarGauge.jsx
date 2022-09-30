@@ -18,14 +18,14 @@ const BarGauge = ({ data, max, title }) => {
                     <BarChart
                         layout="vertical"
                         margin={{ top: 0, left: 15, right: 15, bottom: 0 }}
-                        barGap={-32}
+                        barGap={-15}
                         data={[{ rawData, max }]}
                     >
                         <XAxis type="number" hide />
                         <YAxis type="category" dataKey="title" hide />
 
-                        <Bar dataKey="max" fill={colorPrimary} />
-                        <Bar dataKey="rawData" fill={colorSecondary} />
+                        <Bar dataKey="max" fill={colorPrimary} isAnimationActive={false} />
+                        <Bar dataKey="rawData" fill={colorSecondary} isAnimationActive={false} />
                     </BarChart>
                 </ResponsiveContainer>
             </div>

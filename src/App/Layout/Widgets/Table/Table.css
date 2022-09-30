@@ -8,10 +8,9 @@
     white-space: nowrap;
 }
 
-.table>tbody>tr>td:not(:first-child) {
-    width: 150px;
+.table>tbody>tr>td:not(:first-child), .table>thead>tr>th:not(:first-child) {
     white-space: nowrap;
-    text-align: left;
+    text-align: right;
 }
 
 .table-highlight {

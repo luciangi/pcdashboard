@@ -1,5 +1,5 @@
 .circular-gauge-wrapper {
-    height: 300px;
+    height: 120px;
 }
 
 .circular-gauge-title {
@@ -9,7 +9,7 @@
 
 .circular-gauge-label {
     position: relative;
-    top: calc(var(--font-header-size) * 2.5);
+    top: calc(var(--font-header-size) * 2.3);
     margin-bottom: calc(var(--font-header-size) * -1);
 
     text-align: center;
@@ -17,5 +17,5 @@
 }
 
 .circular-gauge-chart {
-    height: 250px;
+    height: 120px;
 }

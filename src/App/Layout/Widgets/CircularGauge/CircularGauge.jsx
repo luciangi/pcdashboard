@@ -23,6 +23,7 @@ const CircularGauge = ({ data, max, title }) => {
                             blendStroke
                             cy="50%"
                             cx="50%"
+                            isAnimationActive={false}
                         >
                             <Cell fill={colorSecondary} />
                             <Cell fill={colorPrimary} />

@@ -1,6 +1,5 @@
-.layout-container {
+.layout-row {
     display: flex;
-    flex-direction: row;
 }
 
 .layout-column {
