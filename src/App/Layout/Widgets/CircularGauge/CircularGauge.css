@@ -9,11 +9,11 @@
 
 .circular-gauge-label {
     position: relative;
-    top: calc(var(--font-header-size) * 2.3);
+    top: calc(var(--font-header-size) * 2);
     margin-bottom: calc(var(--font-header-size) * -1);
 
     text-align: center;
-    font-size: var(--font-header-size);
+    font-size: var(--font-size);
 }
 
 .circular-gauge-chart {

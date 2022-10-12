@@ -47,7 +47,7 @@ const Layout = ({ now, data }) => {
                             },
                             {
                                 name: <div><GiCpu /> AIO</div>,
-                                value: getSensorRawData("AIO Pump", false) > 1000 ? "ON" : "OFF"
+                                value: getSensorRawData("AIO Pump", false) > 0 ? "ON" : "OFF"
                             },
                             {
                                 name: <div><GiComputerFan /> CPU</div>,

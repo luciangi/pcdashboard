@@ -1,14 +1,15 @@
 .cpu-metrics-wrapper {
+    margin-top: 15px;
     display: flex;
     flex-direction: row;
 }
 
 .cpu-metrics-c1 {
-    width: 60%;
+    width: 50%;
 }
 
 .cpu-metrics-c2 {
-    width: 40%;
+    width: 50%;
 }
 
 .cpu-metrics-c1r1,
