@@ -21,7 +21,7 @@ const Layout = ({ now, data }) => {
                     title={<div><BsCpu /> CPU</div>}
                     cg1={{
                         name: <div><BsPercent /> Load</div>,
-                        value: getSensorData("Total CPU Usage"),
+                        value: getSensorData("Total CPU Utility"),
                         max: 100
                     }}
                     cg2={{

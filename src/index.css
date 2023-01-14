@@ -3,7 +3,7 @@ body {
     padding: 0px;
     overflow: hidden;
     background-color: black;
-    background-image: radial-gradient(var(--background-color), black 120%);
+    background-image: radial-gradient(var(--background-color), var(--background-color-secondary) 120%);
     font: var(--font-size) Inconsolata, monospace;
     color: var(--color-primary);
     text-shadow: 0 0 3px var(--font-shadow-color);
