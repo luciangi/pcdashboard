@@ -1,6 +1,38 @@
 :root {
-    --background-color: #824c00;
+    --background-color: #000000;
+    --background-color-secondary: #000000;
 
+    --color-primary: #349620;
+    --color-secondary: #4af626;
+
+    --font-shadow-color: #349620;
+
+    --font-header-size: 32px;
+    --font-size: 20px;
+}
+
+/* green */
+/* 
+:root {
+    --background-color: #000000;
+    --background-color-secondary: #000000;
+
+    --color-primary: #349620;
+    --color-secondary: #4af626;
+
+    --font-shadow-color: #349620;
+
+    --font-header-size: 32px;
+    --font-size: 20px;
+}
+*/
+
+/* amber */
+/* 
+:root {
+    --background-color: #8a5100;
+    --background-color-secondary: #2c1900;
+    
     --color-primary: #d47c00;
     --color-secondary: #ffae3e;
 
@@ -9,22 +41,11 @@
     --font-header-size: 32px;
     --font-size: 20px;
 }
-
-/* amber */
-/* :root {
-    --background-color: #824c00;
-
-    --color-primary: #d47c00;
-    --color-secondary: #ffae3e;
-
-    --font-shadow-color: #ffa321;
-
-    --font-header-size: 32px;
-    --font-size: 20px;
-} */
+*/
 
 /* blue */
-/* :root {
+/* 
+:root {
     --background-color: #005f8f;
     --background-color-secondary: #001a41;
 
@@ -35,4 +56,5 @@
 
     --font-header-size: 32px;
     --font-size: 20px;
-} */
+}
+*/

@@ -4,7 +4,7 @@ import { getColors, getRawData } from "../../../../util";
 import "./CircularGauge.css";
 
 const CircularGauge = ({ data, max, title }) => {
-    const rawData = getRawData(data)
+    const rawData = Math.max(getRawData(data), max)
     const { colorPrimary, colorSecondary } = getColors()
 
     return (
