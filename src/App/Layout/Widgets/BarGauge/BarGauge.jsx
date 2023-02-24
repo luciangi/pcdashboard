@@ -1,8 +1,8 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
-import { getColors, getRawData } from "../../../../util"
-import "./BarGauge.css"
+import PropTypes from "prop-types";
+import React from "react";
+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
+import { getColors, getRawData } from "../../../../util";
+import "./BarGauge.css";
 
 const BarGauge = ({ data, max, title }) => {
     const rawData = getRawData(data)

@@ -1,4 +1,3 @@
-import React from "react"
 import PropTypes from "prop-types"
 import { GiStack } from "react-icons/gi"
 import Card from "../Card/Card"
