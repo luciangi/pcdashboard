@@ -1,9 +1,10 @@
-import PropTypes from "prop-types";
-import BarGauge from "../BarGauge/BarGauge";
-import Card from "../Card/Card";
-import CircularGauge from "../CircularGauge/CircularGauge";
-import Table from "../Table/Table";
-import "./Component.css";
+import React from "react"
+import PropTypes from "prop-types"
+import BarGauge from "../BarGauge/BarGauge"
+import Card from "../Card/Card"
+import CircularGauge from "../CircularGauge/CircularGauge"
+import Table from "../Table/Table"
+import "./Component.css"
 
 const Component = ({ title, cg1, cg2, bg, additionalData }) => (
     <Card

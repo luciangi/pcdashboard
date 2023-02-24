@@ -1,7 +1,8 @@
-import PropTypes from "prop-types";
-import { Cell, Pie, PieChart, ResponsiveContainer } from "recharts";
-import { getColors, getRawData } from "../../../../util";
-import "./CircularGauge.css";
+import React from "react"
+import PropTypes from "prop-types"
+import { Cell, Pie, PieChart, ResponsiveContainer } from "recharts"
+import { getColors, getRawData } from "../../../../util"
+import "./CircularGauge.css"
 
 const CircularGauge = ({ data, max, title }) => {
     const rawData = Math.max(getRawData(data), max)

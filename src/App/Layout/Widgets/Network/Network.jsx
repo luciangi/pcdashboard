@@ -1,3 +1,4 @@
+import React from "react"
 import PropTypes from "prop-types"
 import { GiNetworkBars } from "react-icons/gi"
 import Card from "../Card/Card"
