@@ -1,3 +1,4 @@
+import React from "react"
 import PropTypes from "prop-types"
 import { BsCpu, BsDisplay, BsLightningCharge, BsPercent, BsThermometerHalf } from "react-icons/bs"
 import { GiComputerFan, GiCpu, GiMicrochip } from "react-icons/gi"
