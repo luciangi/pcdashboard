@@ -10,7 +10,7 @@
 
 .circular-gauge-label {
     position: relative;
-    top: calc(var(--font-header-size) * 2);
+    top: calc(var(--font-header-size) * 2.2);
     margin-bottom: calc(var(--font-header-size) * -1);
 
     text-align: center;

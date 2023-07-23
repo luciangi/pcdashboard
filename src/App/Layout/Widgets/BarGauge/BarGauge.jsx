@@ -24,7 +24,7 @@ const BarGauge = ({ data, additionalData, max, title }) => {
                         <XAxis type="number" hide />
                         <YAxis type="category" dataKey="title" hide />
 
-                        <Bar dataKey="max" fill={colorSecondary} isAnimationActive={false} />
+                        <Bar dataKey="max" stroke={colorPrimary} isAnimationActive={false} strokeWidth={3}/>
                         <Bar dataKey="rawData" fill={colorPrimary} isAnimationActive={false} />
                     </BarChart>
                 </ResponsiveContainer>

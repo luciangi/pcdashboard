@@ -7,7 +7,7 @@ import "./CircularGauge.css"
 const CircularGauge = ({ data, max, allowValueAboveMax, enableAlerts = true, title }) => {
     const rawData = getRawData(data)
     const pieData = Math.min(getRawData(data), max)
-    const { colorPrimary, colorSecondary, colorAlert } = getColors()
+    const { colorPrimary, colorSecondary, colorAlert, colorBackground } = getColors()
     const shouldAlert = enableAlerts && pieData >= max
 
     return (
@@ -20,16 +20,17 @@ const CircularGauge = ({ data, max, allowValueAboveMax, enableAlerts = true, tit
                         <Pie
                             data={[{ v: pieData }, { v: max - pieData }]}
                             dataKey="v"
-                            startAngle={200}
-                            endAngle={-20}
-                            innerRadius="55%"
-                            blendStroke
+                            startAngle={220}
+                            endAngle={-40}
+                            innerRadius="50%"
                             cy="50%"
                             cx="50%"
                             isAnimationActive={false}
+                            fill={colorBackground}
+                            strokeWidth={3}
                         >
                             <Cell fill={shouldAlert ? colorAlert : colorPrimary} />
-                            <Cell fill={colorSecondary} />
+                            {/* <Cell fill={colorSecondary} /> */}
                         </Pie>
                     </PieChart>
                 </ResponsiveContainer>
