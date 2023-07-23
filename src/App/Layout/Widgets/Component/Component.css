@@ -1,3 +1,7 @@
+.component-wrapper {
+    margin: 10px;
+}
+
 .component-row {
     display: flex;
     flex-direction: row;

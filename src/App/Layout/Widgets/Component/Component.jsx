@@ -10,7 +10,7 @@ const Component = ({ title, cg1, cg2, bg, additionalData }) => (
     <Card
         title={title}
         content={
-            <div>
+            <div className="component-wrapper">
                 <div className="component-row">
                     <div className="component-column-1">
                         <CircularGauge title={cg1.name} data={cg1.value} max={cg1.max} allowValueAboveMax={cg1.allowValueAboveMax} enableAlerts={cg1.enableAlerts}/>

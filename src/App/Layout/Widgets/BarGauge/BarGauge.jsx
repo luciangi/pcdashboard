@@ -6,7 +6,7 @@ import "./BarGauge.css"
 
 const BarGauge = ({ data, additionalData, max, title }) => {
     const rawData = getRawData(data)
-    const { colorPrimary, colorSecondary } = getColors()
+    const { colorPrimary } = getColors()
 
     return (
         <div className="bar-gauge-wrapper">
