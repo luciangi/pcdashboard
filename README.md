@@ -1,6 +1,9 @@
 # pcdashboard
 pcdashboard is a React application for displaying a PC's sensor readings from a REST endpoint.
 
+## UI
+![](.README_images/ui.png)
+
 ## Running in development mode
 To start the app in the development mode execute the following command:
 ```bash
