@@ -5,7 +5,7 @@ body {
     background-color: black;
     background-image: radial-gradient(var(--background-color), var(--background-color-secondary) 120%);
     font: var(--font-size) Inconsolata, monospace;
-    color: var(--color-primary);
+    color: var(--color-secondary);
     text-shadow: 0 0 3px var(--font-shadow-color);
     height: 100vh;
 }

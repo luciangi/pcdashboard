@@ -1,3 +1,4 @@
 .sparkline-wrapper {
-    height: 103px;
+    display: flex;
+    height: 150px;
 }

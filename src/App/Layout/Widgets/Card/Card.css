@@ -18,7 +18,7 @@
     padding-left: 5px;
     padding-right: 5px;
     font-size: var(--font-header-size);
-    color: var(--color-secondary);
+    color: var(--color-primary);
 }
 
 .no-legend {

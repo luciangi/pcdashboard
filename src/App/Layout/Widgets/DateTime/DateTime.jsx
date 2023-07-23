@@ -7,8 +7,8 @@ import { getDateString, getTimeString } from "./util.js"
 const DateTime = ({ now }) => (
     <Card content={
         <div className="dateTime">
-            <div>{getDateString(now)}</div>
             <div className="time">{getTimeString(now)}</div>
+            <div>{getDateString(now)}</div>
         </div>
     } />
 )

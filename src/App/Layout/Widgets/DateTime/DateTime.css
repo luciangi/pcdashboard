@@ -1,8 +1,9 @@
 .dateTime {
     text-align: center;
+    margin: 5px;
 }
 
 .time {
     font-size: var(--font-header-size);
-    color: var(--color-secondary);
+    color: var(--color-primary);
 }

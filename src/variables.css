@@ -2,10 +2,11 @@
     --background-color: #000000;
     --background-color-secondary: #000000;
 
-    --color-primary: #349620;
-    --color-secondary: #4af626;
+    --color-primary: #f8fdfe;
+    --color-secondary: #829fa8;
+    --color-alert: #ff0000;
 
-    --font-shadow-color: #349620;
+    --font-shadow-color: #9fdff5;
 
     --font-header-size: 30px;
     --font-size: 20px;

@@ -1,9 +1,15 @@
+.layout-wrapper {
+    margin: 15px;
+}
+
 .layout-row {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .layout-column {
     width: 50%;
-    display: flex;
-    flex-direction: column;
+    flex: 1;
 }

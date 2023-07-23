@@ -4,6 +4,7 @@ export const getColors = () => (
     {
         colorPrimary: getCssVariable("--color-primary"),
         colorSecondary: getCssVariable("--color-secondary"),
+        colorAlert: getCssVariable("--color-alert"),
         colorBackground: getCssVariable("--background-color")
     }
 )

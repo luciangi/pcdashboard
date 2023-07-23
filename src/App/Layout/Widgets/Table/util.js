@@ -9,6 +9,5 @@ export const generateCell = (cell) => {
    if (typeof cell === "function") {
       return cell
    }
-
    return truncate(cell, 15)
 }

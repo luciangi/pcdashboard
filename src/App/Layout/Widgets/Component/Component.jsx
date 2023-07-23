@@ -9,31 +9,33 @@ import "./Component.css"
 const Component = ({ title, cg1, cg2, bg, additionalData }) => (
     <Card
         title={title}
-        content={<div className="cpu-metrics-wrapper">
-            <div className="cpu-metrics-c1">
-                <div className="cpu-metrics-c1r1">
-                    <div className="cpu-metrics-c1r1c1">
-                        <CircularGauge title={cg1.name} data={cg1.value} max={cg1.max} />
+        content={
+            <div>
+                <div className="component-row">
+                    <div className="component-column-1">
+                        <CircularGauge title={cg1.name} data={cg1.value} max={cg1.max} allowValueAboveMax={cg1.allowValueAboveMax} enableAlerts={cg1.enableAlerts}/>
                     </div>
-                    <div className="cpu-metrics-c1r1c2">
-                        <CircularGauge title={cg2.name} data={cg2.value} max={cg2.max} />
+                    <div className="component-column-1">
+                        <CircularGauge title={cg2.name} data={cg2.value} max={cg2.max} allowValueAboveMax={cg2.allowValueAboveMax} enableAlerts={cg1.enableAlerts}/>
+                    </div>
+                    <div className="component-column-2">
+                        <Table hideHeading={true} heading={additionalData.heading} body={additionalData.data} />
                     </div>
                 </div>
-                <div className="cpu-metrics-c1r2">
-                    <BarGauge title={bg.name} data={bg.value} max={bg.max} />
+                <div className="component-row">
+                    <div className="component-column-1">
+                        <BarGauge title={bg.name} data={bg.value} max={bg.max} additionalData={bg.additionalData} />
+                    </div>
                 </div>
             </div>
-            <div className="cpu-metrics-c2">
-                <Table hideHeading={true} heading={additionalData.heading} body={additionalData.data} />
-            </div>
-        </div>} />
+        } />
 )
 
 const gaugePropType = PropTypes.shape({
     name: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
     value: PropTypes.string.isRequired,
     max: PropTypes.number.isRequired
-}).isRequired;
+}).isRequired
 
 Component.propTypes = {
     title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,

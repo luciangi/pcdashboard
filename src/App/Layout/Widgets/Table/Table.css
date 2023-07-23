@@ -1,6 +1,8 @@
 .table {
     width: 100%;
     text-align: left;
+    margin: 5px;
+    height: 150px;
 }
 
 .table>thead {
@@ -8,11 +10,12 @@
     white-space: nowrap;
 }
 
-.table>tbody>tr>td:not(:first-child), .table>thead>tr>th:not(:first-child) {
-    white-space: nowrap;
+.table>tbody>tr>td:not(:first-child),
+.table>thead>tr>th:not(:first-child) {
+    white-space: pre-wrap;
     text-align: right;
 }
 
 .table-highlight {
-    color: var(--color-secondary);
+    color: var(--color-primary);
 }

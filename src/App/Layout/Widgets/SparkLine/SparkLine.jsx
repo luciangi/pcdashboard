@@ -14,8 +14,8 @@ const SparkLine = ({ instant, data, reference, max, showLegend = false }) => {
 
     const { colorPrimary, colorSecondary } = getColors()
     const idxToColor = {
-        0: colorSecondary,
-        1: colorPrimary
+        0: colorPrimary,
+        1: colorSecondary
     }
 
     const [dataHistory, setDataHistory] = useState([])
@@ -27,7 +27,7 @@ const SparkLine = ({ instant, data, reference, max, showLegend = false }) => {
             <ResponsiveContainer>
                 <LineChart
                     data={dataHistory}
-                    margin={{ top: 5, left: 20, right: 5, bottom: 5 }}
+                    margin={{ top: 10, left: 0, right: 10, bottom: 10 }}
                 >
                     <XAxis
                         type="number"
@@ -39,11 +39,11 @@ const SparkLine = ({ instant, data, reference, max, showLegend = false }) => {
                         type="number"
                         domain={[0, max ? max : "auto"]}
                         dataKey={`data.${Object.keys(data)[0]}`}
-                        stroke={colorPrimary}
+                        stroke={colorSecondary}
                     />
 
                     {showLegend === true && <Legend />}
-                    {reference && <ReferenceLine y={reference} stroke={colorPrimary} strokeWidth={5} />}
+                    {reference && <ReferenceLine y={reference} stroke={colorSecondary} strokeWidth={5} />}
 
                     {Object.keys(data).map((k, idx) => (<Line key={`data.${k}`} dataKey={`data.${k}`} stroke={idxToColor[idx]} strokeWidth={5} dot={false} isAnimationActive={false} name={k} />))}
                 </LineChart>

@@ -18,4 +18,4 @@ Processes.propTypes = {
     processes: PropTypes.array.isRequired
 }
 
-export default Processes;
+export default Processes

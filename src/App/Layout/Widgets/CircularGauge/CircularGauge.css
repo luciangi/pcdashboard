@@ -1,10 +1,11 @@
 .circular-gauge-wrapper {
     height: 120px;
+    margin-top: 20px;
 }
 
 .circular-gauge-title {
     text-align: center;
-    color: var(--color-secondary);
+    color: var(--color-primary);
 }
 
 .circular-gauge-label {
