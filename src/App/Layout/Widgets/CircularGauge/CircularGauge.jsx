@@ -27,6 +27,7 @@ const CircularGauge = ({ data, max, allowValueAboveMax, enableAlerts = true, tit
                             cx="50%"
                             isAnimationActive={false}
                             fill={colorBackground}
+                            stroke={colorSecondary}
                             strokeWidth={3}
                         >
                             <Cell fill={shouldAlert ? colorAlert : colorPrimary} />

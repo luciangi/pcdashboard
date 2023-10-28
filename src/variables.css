@@ -2,6 +2,22 @@
     --background-color: #000000;
     --background-color-secondary: #000000;
 
+    --color-primary: #ff7300;
+    --color-secondary: #ffb376;
+    --color-alert: #ff0000;
+
+    --font-shadow-color: #944300;
+
+    --font-header-size: 36px;
+    --font-size: 24px;
+}
+
+/* orange */
+/*
+:root {
+    --background-color: #000000;
+    --background-color-secondary: #000000;
+
     --color-primary: #e8feff;
     --color-secondary: #90aca9;
     --color-alert: #ff0000;
@@ -11,7 +27,7 @@
     --font-header-size: 36px;
     --font-size: 24px;
 }
-
+*/
 /* green */
 /* 
 :root {
